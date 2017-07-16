@@ -55,7 +55,7 @@ public class SystemContextFilter implements Filter {
 		try {
 			pageSize = Integer.parseInt(cfg.getInitParameter("pageSize"));
 		} catch (NumberFormatException e) {
-			pageSize = 15;
+			pageSize = 5;
 		}
 
 	}
