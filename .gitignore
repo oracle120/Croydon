@@ -1,5 +1,5 @@
-/bcs-core/
-/bcs-hibernate/
-/bcs-parent/
-/bcs-service/
-/bcs-web/
+.settings
+.project
+target
+.classpath
+*.gitignore

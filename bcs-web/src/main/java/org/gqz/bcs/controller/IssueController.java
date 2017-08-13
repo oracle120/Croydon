@@ -38,7 +38,7 @@ public class IssueController {
 	public String add(Model model) {
 		model.addAttribute("issueDto", new IssueDto());
 		return "issue/add";
-	}
+	} 
 	
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public String add(@Valid IssueDto issueDto, BindingResult br, Model model) {
