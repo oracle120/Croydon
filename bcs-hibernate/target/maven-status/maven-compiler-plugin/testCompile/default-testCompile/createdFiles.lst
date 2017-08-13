@@ -1,7 +1,0 @@
-org\gqz\basic\model\User.class
-org\gqz\basic\test\util\EntitiesHelper.class
-org\gqz\basic\dao\UserDao.class
-org\gqz\basic\test\util\AbstractDbUnitTestCase.class
-org\gqz\basic\test\util\DbUtil.class
-org\gqz\basic\dao\IUserDao.class
-org\gqz\basic\dao\TestUserDao.class

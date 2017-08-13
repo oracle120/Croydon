@@ -38,13 +38,13 @@ public class IssueController {
 	public String add(Model model) {
 		model.addAttribute("issueDto", new IssueDto());
 		return "issue/add";
-	} 
+	}   
 	
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public String add(@Valid IssueDto issueDto, BindingResult br, Model model) {
 //		if (br.hasErrors()) {
 //			//initAddUser(model);
-//			return "issue/add";
+///			return "issue/add";
 //		}
 		issueService.add(issueDto.getIssue());
 		System.out.println("---------------没有用到service层，原因不明");
