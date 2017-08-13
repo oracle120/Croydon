@@ -55,11 +55,11 @@ $(function(){
 				
 				<div class="form-group">
 					<div class="editormd" id="test-editormd">
-							<textarea class="editormd-markdown-textarea"
+							<sf:textarea class="editormd-markdown-textarea"
 								name="test-editormd-markdown-doc"
-								id="test-editormd-markdown-doc"></textarea>
+								id="test-editormd-markdown-doc" path="solution"></sf:textarea>
 							<!-- 第二个隐藏文本域，用来构造生成的HTML代码，方便表单POST提交，这里的name可以任意取，后台接受时以这个name键为准 -->
-							<sf:textarea class="editormd-html-textarea" name="text" id="text" path="solution" />
+							<textarea class="editormd-html-textarea" name="text" id="text" ></textarea>
 					</div>
 				</div>
 				<br>
