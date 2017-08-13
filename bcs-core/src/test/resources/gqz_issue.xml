@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataset>
-	<gqz_issue id="1" title="title_1" description="description" solution="solution" userid="userid" date="2010-12-12" />
-	<gqz_issue id="2" title="title_2" description="description" solution="solution" userid="userid" date="2010-12-12" />
-	<gqz_issue id="3" title="title_3" description="description" solution="solution" userid="userid" date="2010-12-12" />
+	<gqz_issue id="1" title="title_1" description="description" DtaContent="solution1" userid="userid" date="2010-12-12" />
+	<gqz_issue id="2" title="title_2" description="description" DtaContent="solution1" userid="userid" date="2010-12-12" />
+	<gqz_issue id="3" title="title_3" description="description" DtaContent="solution1" userid="userid" date="2010-12-12" />
 </dataset>

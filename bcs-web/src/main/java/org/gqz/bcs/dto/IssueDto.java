@@ -31,12 +31,6 @@ public class IssueDto {
 	 */
 	private String userid;
 	
-	/**
-	 * create time of the issue
-	 */
-	private Date date;
-
-	
 	
 	/**
 	 * @param id
@@ -52,7 +46,6 @@ public class IssueDto {
 		this.setDescription(issue.getDescription());
 		this.setSolution(issue.getSolution());
 		this.setUserid(issue.getUserid());
-		this.setDate(issue.getDate());
 	}
 
 	/**
@@ -103,13 +96,6 @@ public class IssueDto {
 		this.userid = userid;
 	}
 
-	public Date getDate() {
-		return date;
-	}
-
-	public void setDate(Date date) {
-		this.date = date;
-	}
 	
 	
 	public Issue getIssue() {
@@ -120,7 +106,6 @@ public class IssueDto {
 		issue.setDescription(this.getDescription());
 		issue.setSolution(this.getSolution());
 		issue.setUserid(this.getUserid());
-		issue.setDate(this.getDate());
 		
 		return issue;
 	}

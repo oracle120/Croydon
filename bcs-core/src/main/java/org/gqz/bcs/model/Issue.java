@@ -2,10 +2,13 @@ package org.gqz.bcs.model;
 
 import java.util.Date;
 
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
@@ -16,31 +19,31 @@ public class Issue {
 	 * issue id
 	 */
 	private int id;
-	
+
 	/**
 	 * issue title
 	 */
 	private String title;
-	
+
 	/**
 	 * issue description
 	 */
 	private String description;
-	
+
 	/**
 	 * issue solution
 	 */
 	private String solution;
-	
+
 	/**
 	 * the user who create the issue and solution
 	 */
 	private String userid;
-	
+
 	/**
 	 * create time of the issue
 	 */
-	private Date date;
+	private Date createDate;
 
 	/**
 	 * @param id
@@ -57,7 +60,7 @@ public class Issue {
 		this.description = description;
 		this.solution = solution;
 		this.userid = userid;
-		this.date = date;
+		this.createDate = date;
 	}
 
 	/**
@@ -76,11 +79,9 @@ public class Issue {
 		this.userid = userid;
 	}
 
-
-
 	public Issue() {
 	}
-	
+
 	@Id
 	@GeneratedValue
 	public int getId() {
@@ -109,6 +110,9 @@ public class Issue {
 		this.description = description;
 	}
 
+	@Lob 
+	@Basic(fetch = FetchType.LAZY) 
+	@Column(name="DtaContent", columnDefinition="TEXT", length = 16777216, nullable=true) 
 	public String getSolution() {
 		return solution;
 	}
@@ -125,12 +129,13 @@ public class Issue {
 		this.userid = userid;
 	}
 
+	@Column(name = "date")
 	public Date getDate() {
-		return date;
+		return createDate;
 	}
 
 	public void setDate(Date date) {
-		this.date = date;
+		this.createDate = date;
 	}
-	
+
 }

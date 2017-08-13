@@ -1,57 +1,52 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%> 
+	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/resources/css/admin/main.css"/>
-<script type="text/javascript" src="<%=request.getContextPath() %>/resources/js/jquery-1.7.2.min.js"></script>
-<script type="text/javascript" src="<%=request.getContextPath() %>/resources/js/core/jquery.cms.core.js"></script>
-<script type="text/javascript" src="<%=request.getContextPath() %>/resources/js/admin/main.js"></script>
+<!-- 包含头部信息用于适应不同设备 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script
+	src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<title>Insert title here</title>
+
 </head>
 <body>
-<div id="content">
-	<h3 class="admin_link_bar">
-		<jsp:include page="inc.jsp"></jsp:include>
-	</h3>
-	<table width="800" cellspacing="0" cellPadding="0" id="listTable">
-		<thead>
-		<tr>
-			<td>问题标识</td>
-			<td>问题标题</td>
-			<td>提交人</td>
-			<td>提交时间</td>
-			<td>操作</td>
-		</tr>
-		</thead>
-		<tbody>
-		<c:forEach items="${issues.datas }" var="issue">
-			<tr>
-				<td>${issue.id }&nbsp;</td>
-				<td><a href="${issue.id }" class="list_link">${issue.title }</a></td>
-				<td>${issue.userid }&nbsp;</td>
-				<td>${issue.date }&nbsp;</td>
-				<td>
-					<a href="delete/${issue.id }" title="${issue.id }" class="list_op delete">删除</a>
-					<a href="update/${issue.id }" class="list_op">更新</a>
-				&nbsp;
-				</td>
-			</tr>
-		</c:forEach>
-		</tbody>
-		<tfoot>
-		<tr>
-			<td colspan="6" style="text-align:right;margin-right:10px;">
-			<jsp:include page="/jsp/pager.jsp">
-				<jsp:param value="${issues.total}" name="totalRecord"/>
-				<jsp:param value="issues" name="url"/>
-			</jsp:include>
-			</td>
-		</tr>
-		</tfoot>
-	</table>
-</div>
+	<div class="container">
+		<div class="row clearfix">
+			<div class="col-md-12 column">
+				<nav class="navbar navbar-default" role="navigation"> <jsp:include
+					page="/jsp/admin/top_inc.jsp"></jsp:include> </nav>
+				<br />
+				<c:forEach items="${issues.datas }" var="issue">
+					<h2>${issue.title }</h2>
+					<p>${issue.description }</p>
+					<p>
+						<a class="btn" href="${issue.id }">View details »</a>
+					</p>
+				</c:forEach>
+				<h2>Heading</h2>
+				<p>Donec id elit non mi porta gravida at eget metus. Fusce
+					dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+					ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
+					magna mollis euismod. Donec sed odio dui.</p>
+				<p>
+					<a class="btn" href="#">View details »</a>
+				</p>
+
+				<jsp:include page="/jsp/pager.jsp">
+					<jsp:param value="${issues.total}" name="totalRecord" />
+					<jsp:param value="issues" name="url" />
+				</jsp:include>
+
+			</div>
+		</div>
+	</div>
 </body>
 </html>

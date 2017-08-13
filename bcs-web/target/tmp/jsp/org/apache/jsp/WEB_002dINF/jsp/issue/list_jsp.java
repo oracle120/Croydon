@@ -7,12 +7,6 @@ import javax.servlet.jsp.*;
 public final class list_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
-static private org.apache.jasper.runtime.ProtectedFunctionMapper _jspx_fnmap_0;
-
-static {
-  _jspx_fnmap_0= org.apache.jasper.runtime.ProtectedFunctionMapper.getMapForFunction("fn:length", org.apache.taglibs.standard.functions.Functions.class, "length", new Class[] {java.lang.Object.class});
-}
-
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
 
   private static java.util.List<String> _jspx_dependants;
@@ -59,58 +53,50 @@ static {
 
       out.write("\r\n");
       out.write("\r\n");
-      out.write(" \r\n");
+      out.write("\r\n");
       out.write("<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n");
       out.write("<html>\r\n");
       out.write("<head>\r\n");
       out.write("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
-      out.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"");
-      out.print(request.getContextPath() );
-      out.write("/resources/css/admin/main.css\"/>\r\n");
-      out.write("<script type=\"text/javascript\" src=\"");
-      out.print(request.getContextPath() );
-      out.write("/resources/js/jquery-1.7.2.min.js\"></script>\r\n");
-      out.write("<script type=\"text/javascript\" src=\"");
-      out.print(request.getContextPath() );
-      out.write("/resources/js/core/jquery.cms.core.js\"></script>\r\n");
-      out.write("<script type=\"text/javascript\" src=\"");
-      out.print(request.getContextPath() );
-      out.write("/resources/js/admin/main.js\"></script>\r\n");
+      out.write("<!-- 包含头部信息用于适应不同设备 -->\r\n");
+      out.write("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n");
+      out.write("<link rel=\"stylesheet\"\r\n");
+      out.write("\thref=\"https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css\">\r\n");
+      out.write("<script src=\"https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js\"></script>\r\n");
+      out.write("<script\r\n");
+      out.write("\tsrc=\"https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\r\n");
+      out.write("\r\n");
+      out.write("<title>Insert title here</title>\r\n");
+      out.write("\r\n");
       out.write("</head>\r\n");
       out.write("<body>\r\n");
-      out.write("<div id=\"content\">\r\n");
-      out.write("\t<h3 class=\"admin_link_bar\">\r\n");
-      out.write("\t\t");
-      org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "inc.jsp", out, false);
-      out.write("\r\n");
-      out.write("\t</h3>\r\n");
-      out.write("\t<table width=\"800\" cellspacing=\"0\" cellPadding=\"0\" id=\"listTable\">\r\n");
-      out.write("\t\t<thead>\r\n");
-      out.write("\t\t<tr>\r\n");
-      out.write("\t\t\t<td>问题标识</td>\r\n");
-      out.write("\t\t\t<td>问题标题</td>\r\n");
-      out.write("\t\t\t<td>提交人</td>\r\n");
-      out.write("\t\t\t<td>提交时间</td>\r\n");
-      out.write("\t\t\t<td>操作</td>\r\n");
-      out.write("\t\t</tr>\r\n");
-      out.write("\t\t</thead>\r\n");
-      out.write("\t\t<tbody>\r\n");
-      out.write("\t\t");
+      out.write("\t<div class=\"container\">\r\n");
+      out.write("\t\t<div class=\"row clearfix\">\r\n");
+      out.write("\t\t\t<div class=\"col-md-12 column\">\r\n");
+      out.write("\t\t\t\t<nav class=\"navbar navbar-default\" role=\"navigation\"> ");
+      org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "/jsp/admin/top_inc.jsp", out, false);
+      out.write(" </nav>\r\n");
+      out.write("\t\t\t\t<br />\r\n");
+      out.write("\t\t\t\t");
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
         return;
       out.write("\r\n");
-      out.write("\t\t</tbody>\r\n");
-      out.write("\t\t<tfoot>\r\n");
-      out.write("\t\t<tr>\r\n");
-      out.write("\t\t\t<td colspan=\"6\" style=\"text-align:right;margin-right:10px;\">\r\n");
-      out.write("\t\t\t");
-      org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "/jsp/pager.jsp" + "?" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("totalRecord", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${fn:length(issues)}", java.lang.String.class, (PageContext)_jspx_page_context, _jspx_fnmap_0), request.getCharacterEncoding()) + "&" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("url", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("issues", request.getCharacterEncoding()), out, false);
+      out.write("\t\t\t\t<h2>Heading</h2>\r\n");
+      out.write("\t\t\t\t<p>Donec id elit non mi porta gravida at eget metus. Fusce\r\n");
+      out.write("\t\t\t\t\tdapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,\r\n");
+      out.write("\t\t\t\t\tut fermentum massa justo sit amet risus. Etiam porta sem malesuada\r\n");
+      out.write("\t\t\t\t\tmagna mollis euismod. Donec sed odio dui.</p>\r\n");
+      out.write("\t\t\t\t<p>\r\n");
+      out.write("\t\t\t\t\t<a class=\"btn\" href=\"#\">View details »</a>\r\n");
+      out.write("\t\t\t\t</p>\r\n");
       out.write("\r\n");
-      out.write("\t\t\t</td>\r\n");
-      out.write("\t\t</tr>\r\n");
-      out.write("\t\t</tfoot>\r\n");
-      out.write("\t</table>\r\n");
-      out.write("</div>\r\n");
+      out.write("\t\t\t\t");
+      org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "/jsp/pager.jsp" + "?" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("totalRecord", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${issues.total}", java.lang.String.class, (PageContext)_jspx_page_context, null), request.getCharacterEncoding()) + "&" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("url", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("issues", request.getCharacterEncoding()), out, false);
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\t\t\t</div>\r\n");
+      out.write("\t\t</div>\r\n");
+      out.write("\t</div>\r\n");
       out.write("</body>\r\n");
       out.write("</html>");
     } catch (Throwable t) {
@@ -134,7 +120,7 @@ static {
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_forEach_0.setPageContext(_jspx_page_context);
     _jspx_th_c_forEach_0.setParent(null);
-    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${issues }", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${issues.datas }", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     _jspx_th_c_forEach_0.setVar("issue");
     int[] _jspx_push_body_count_c_forEach_0 = new int[] { 0 };
     try {
@@ -142,34 +128,18 @@ static {
       if (_jspx_eval_c_forEach_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\r\n");
-          out.write("\t\t\t<tr>\r\n");
-          out.write("\t\t\t\t<td>");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${issue.id }", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("&nbsp;</td>\r\n");
-          out.write("\t\t\t\t<td><a href=\"");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${issue.id }", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\" class=\"list_link\">");
+          out.write("\t\t\t\t\t<h2>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${issue.title }", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("</a></td>\r\n");
-          out.write("\t\t\t\t<td>");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${issue.userid }", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("&nbsp;</td>\r\n");
-          out.write("\t\t\t\t<td>");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${issue.date }", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("&nbsp;</td>\r\n");
-          out.write("\t\t\t\t<td>\r\n");
-          out.write("\t\t\t\t\t<a href=\"delete/");
+          out.write("</h2>\r\n");
+          out.write("\t\t\t\t\t<p>");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${issue.description }", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("</p>\r\n");
+          out.write("\t\t\t\t\t<p>\r\n");
+          out.write("\t\t\t\t\t\t<a class=\"btn\" href=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${issue.id }", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\" title=\"");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${issue.id }", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\" class=\"list_op delete\">删除</a>\r\n");
-          out.write("\t\t\t\t\t<a href=\"update/");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${issue.id }", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\" class=\"list_op\">更新</a>\r\n");
-          out.write("\t\t\t\t&nbsp;\r\n");
-          out.write("\t\t\t\t</td>\r\n");
-          out.write("\t\t\t</tr>\r\n");
-          out.write("\t\t");
+          out.write("\">View details »</a>\r\n");
+          out.write("\t\t\t\t\t</p>\r\n");
+          out.write("\t\t\t\t");
           int evalDoAfterBody = _jspx_th_c_forEach_0.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;

@@ -1,7 +1,7 @@
-E:\Java_Workspace\SpringMVC_Eclipse\bcs-hibernate\src\test\java\org\gqz\basic\model\User.java
-E:\Java_Workspace\SpringMVC_Eclipse\bcs-hibernate\src\test\java\org\gqz\basic\test\util\DbUtil.java
-E:\Java_Workspace\SpringMVC_Eclipse\bcs-hibernate\src\test\java\org\gqz\basic\dao\IUserDao.java
-E:\Java_Workspace\SpringMVC_Eclipse\bcs-hibernate\src\test\java\org\gqz\basic\dao\UserDao.java
-E:\Java_Workspace\SpringMVC_Eclipse\bcs-hibernate\src\test\java\org\gqz\basic\dao\TestUserDao.java
-E:\Java_Workspace\SpringMVC_Eclipse\bcs-hibernate\src\test\java\org\gqz\basic\test\util\AbstractDbUnitTestCase.java
-E:\Java_Workspace\SpringMVC_Eclipse\bcs-hibernate\src\test\java\org\gqz\basic\test\util\EntitiesHelper.java
+E:\Code\github\Croydon\bcs-hibernate\src\test\java\org\gqz\basic\dao\UserDao.java
+E:\Code\github\Croydon\bcs-hibernate\src\test\java\org\gqz\basic\dao\IUserDao.java
+E:\Code\github\Croydon\bcs-hibernate\src\test\java\org\gqz\basic\test\util\EntitiesHelper.java
+E:\Code\github\Croydon\bcs-hibernate\src\test\java\org\gqz\basic\dao\TestUserDao.java
+E:\Code\github\Croydon\bcs-hibernate\src\test\java\org\gqz\basic\test\util\DbUtil.java
+E:\Code\github\Croydon\bcs-hibernate\src\test\java\org\gqz\basic\test\util\AbstractDbUnitTestCase.java
+E:\Code\github\Croydon\bcs-hibernate\src\test\java\org\gqz\basic\model\User.java

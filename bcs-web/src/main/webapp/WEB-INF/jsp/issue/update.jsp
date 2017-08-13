@@ -22,49 +22,26 @@ $(function(){
 	<h3 class="admin_link_bar">
 		<jsp:include page="inc.jsp"></jsp:include>
 	</h3>
-	<sf:form method="post" modelAttribute="userDto" id="addForm">
+	<sf:form method="post" modelAttribute="issueDto" id="addForm">
 	<table width="800" cellspacing="0" cellPadding="0">
-	<sf:hidden path="id"/><sf:hidden path="username"/>
-	<sf:hidden path="password"/>
-		<thead><tr><td colspan="2">修改用户-->${userDto.username}</td></tr></thead>
+	<sf:hidden path="id"/>
+	<%-- <sf:hidden path="username"/>
+	<sf:hidden path="password"/> --%>
+		<thead><tr><td colspan="2">修改问题-->${issueDto.id}</td></tr></thead>
 		<tr>
-			<td class="rightTd">显示名称(可以是中文):</td><td class="leftTd"><sf:input path="nickname" size="30"/></td>
+			<td class="rightTd">问题标题:</td><td class="leftTd"><sf:input path="title" size="30"/></td>
 		</tr>
 		<tr>
-			<td class="rightTd">联系电话:</td><td><sf:input path="phone" size="30"/></td>
+			<td class="rightTd">问题描述:</td><td><sf:input path="description" size="30"/></td>
 		</tr>
 		<tr>
-			<td class="rightTd">电子邮件:</td><td><sf:input path="email" size="30"/><sf:errors path="email"/></td>
+			<td class="rightTd">解决方案:</td><td><sf:input path="solution" size="30"/></td>
 		</tr>
 		<tr>
-			<td class="rightTd">状态:</td>
-			<td>
-				<sf:select path="status">
-					<sf:option value="0">停用</sf:option>
-					<sf:option value="1">启用</sf:option>
-				</sf:select>
-			</td>
+			<td class="rightTd">提交人:</td><td><sf:input path="userid" size="30"/></td>
 		</tr>
 		<tr>
-			<td class="rightTd">角色:</td>
-			<td>
-				<%-- <c:forEach var="role" items="${roles }">
-					${role.descr }<input type="checkbox" name="roleIds" value="${role.id }"/>
-				</c:forEach> --%>
-				<sf:checkboxes  items="${roles}" itemLabel="name" itemValue="id" path="roleIds"/>
-			</td>
-		</tr>
-		<tr>
-			<td class="rightTd">用户组:</td>
-			<td>
-				<%-- <c:forEach var="role" items="${roles }">
-					${role.descr }<input type="checkbox" name="roleIds" value="${role.id }"/>
-				</c:forEach> --%>
-				<sf:checkboxes items="${groups }" path="groupIds" itemLabel="name" itemValue="id"/>
-			</td>
-		</tr>
-		<tr>
-			<td colspan="2" class="centerTd"><input type="submit" value="修改用户"/><input type="reset"/></td>
+			<td colspan="2" class="centerTd"><input type="submit" value="修改问题"/><input type="reset"/></td>
 		</tr>
 	</table>
 	</sf:form>

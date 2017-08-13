@@ -14,6 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AdminController {
 	@RequestMapping("/admin")
 	public String index() {
-		return "admin/index";
+		return "redirect:/admin/issue/issues";
 	}
 }
