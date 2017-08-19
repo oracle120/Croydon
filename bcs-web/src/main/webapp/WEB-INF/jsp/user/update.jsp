@@ -54,15 +54,15 @@ $(function(){
 				<sf:checkboxes  items="${roles}" itemLabel="name" itemValue="id" path="roleIds"/>
 			</td>
 		</tr>
-		<tr>
+		<%-- <tr>
 			<td class="rightTd">用户组:</td>
 			<td>
-				<%-- <c:forEach var="role" items="${roles }">
+				<c:forEach var="role" items="${roles }">
 					${role.descr }<input type="checkbox" name="roleIds" value="${role.id }"/>
-				</c:forEach> --%>
+				</c:forEach>
 				<sf:checkboxes items="${groups }" path="groupIds" itemLabel="name" itemValue="id"/>
 			</td>
-		</tr>
+		</tr> --%>
 		<tr>
 			<td colspan="2" class="centerTd"><input type="submit" value="修改用户"/><input type="reset"/></td>
 		</tr>
