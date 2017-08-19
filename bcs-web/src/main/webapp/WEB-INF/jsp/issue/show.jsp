@@ -46,9 +46,14 @@
 					page="/jsp/admin/top_inc.jsp"></jsp:include> </nav>
 				<div class="page-header">
 					<h1>
-						${issue.title } <small>${issue.userid } <small>[<a
+						${issue.title } 
+						<small>${issue.userid } 
+						<c:if test="${islogin != 'yes' }">
+						<small>[<a
 								href="update/${issue.id }" class="list_op">Edit</a>]
-						</small></small>
+						</small>
+						</c:if>
+						</small>
 					</h1>
 				</div>
 				<div id="doc-content"  name="editormd-markdown-doc">

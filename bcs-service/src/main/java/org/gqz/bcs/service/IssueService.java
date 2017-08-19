@@ -10,8 +10,6 @@ import javax.inject.Inject;
 
 import org.gqz.basic.model.Pager;
 import org.gqz.bcs.dao.IIssueDao;
-import org.gqz.bcs.dao.IssueDao;
-import org.gqz.bcs.model.BcsException;
 import org.gqz.bcs.model.Issue;
 import org.springframework.stereotype.Service;
 

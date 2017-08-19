@@ -47,7 +47,7 @@ public class IssueController {
 ///			return "issue/add";
 //		}
 		issueService.add(issueDto.getIssue());
-		System.out.println("---------------没有用到service层，原因不明");
+		
 		return "redirect:/admin/issue/issues";
 	}
 	
@@ -83,6 +83,7 @@ public class IssueController {
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public String show(@PathVariable int id, Model model) {
 		model.addAttribute(issueService.load(id));
+		model.addAttribute("islogin", "yes");
 		return "issue/show";
 	}
 }

@@ -1,7 +1,5 @@
 package org.gqz.bcs.dto;
 
-import java.util.Date;
-
 import org.gqz.bcs.model.Issue;
 import org.hibernate.validator.constraints.NotEmpty;
 
