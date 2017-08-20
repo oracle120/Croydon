@@ -43,7 +43,8 @@
 								<ul class="dropdown-menu">
 									<li><a href="<%=request.getContextPath() %>/admin/issue/add">Add</a></li>
 									<li><a href="<%=request.getContextPath() %>/admin/issue/issues">List</a></li>
-									<li><a href="#">Something else here</a></li>
+									<li><a href="<%=request.getContextPath() %>/admin/user/users">User</a></li>
+									<li><a href="<%=request.getContextPath() %>/admin/role/roles">Role</a></li>
 									<li class="divider"></li>
 									<li><a href="#">Separated link</a></li>
 								</ul></li>
