@@ -37,7 +37,7 @@
 							<button type="submit" class="btn btn-default">Submit</button>
 						</form>
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="#">Link</a></li>
+							<li><a href="<%=request.getContextPath() %>/admin/login/login">Login</a></li>
 							<li class="dropdown"><a href="#" class="dropdown-toggle"
 								data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
 								<ul class="dropdown-menu">
