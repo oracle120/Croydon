@@ -14,7 +14,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.version>3.2.2.RELEASE</spring.version>
+		<spring.version>4.1.6.RELEASE</spring.version>
+		<spring.security.version>4.0.1.RELEASE</spring.security.version>
 	</properties>
 
 
@@ -140,7 +141,8 @@
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-webmvc</artifactId>
-				<version>3.2.2.RELEASE</version>
+				<version>${spring.version}</version>
+				<!-- <version>3.2.2.RELEASE</version> -->
 			</dependency>
 			<dependency>
 				<groupId>javax.servlet</groupId>
@@ -169,6 +171,33 @@
 				<artifactId>commons-beanutils</artifactId>
 				<version>1.8.3</version>
 			</dependency>
+
+			<!-- Spring Security -->
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-core</artifactId>
+				<version>${spring.security.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-web</artifactId>
+				<version>${spring.security.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-config</artifactId>
+				<version>${spring.security.version}</version>
+			</dependency>
+
+			<!-- Spring Security JSP Taglib -->
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-taglibs</artifactId>
+				<version>${spring.security.version}</version>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 
@@ -199,7 +228,6 @@
 							</connector>
 						</connectors>
 					</configuration>
-
 				</plugin>
 			</plugins>
 		</pluginManagement>

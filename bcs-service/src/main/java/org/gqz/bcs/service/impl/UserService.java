@@ -161,11 +161,8 @@ public class UserService implements IUserService {
 		if (tu != null)
 			throw new BcsException("添加的用户对象已经存在，不能添加");
 		user.setCreateDate(new Date());
-		try {
-			user.setPassword(SecurityUtil.md5(user.getUsername(), user.getPassword()));
-		} catch (NoSuchAlgorithmException e) {
-			throw new BcsException("密码加密失败:" + e.getMessage());
-		}
+		//			user.setPassword(SecurityUtil.md5(user.getUsername(), user.getPassword()));
+		user.setPassword(SecurityUtil.springEncode(user.getPassword()));
 		userDao.add(user);
 		// 添加角色对象
 		for (Integer rid : rids) {
@@ -180,5 +177,10 @@ public class UserService implements IUserService {
 			throw new BcsException("要添加的用户角色不存在");
 		// 2、检查用户角色对象是否已经存在，如果存在，就不添加
 		userDao.addUserRole(user, role);
+	}
+
+	@Override
+	public User loadByUsername(String username) {
+		return userDao.loadByUsername(username);
 	}
 }

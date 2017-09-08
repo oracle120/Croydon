@@ -30,10 +30,11 @@ public class LoginController {
 		return "login/login";
 	}
 	
-	@RequestMapping(value="/login",method=RequestMethod.POST)
+	/*@RequestMapping(value="/login",method=RequestMethod.POST)
 	public String login(String username, String password,Model model,HttpSession session) {
+		System.out.println(username + "----------" + password);
 		User loginUser = userService.login(username, password);
 		return "redirect:/admin/issue/issues";
-	}
+	}*/
 	
 }
