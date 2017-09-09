@@ -35,8 +35,6 @@ public class BcsUserDetailService implements UserDetailsService {
 	 *            用户名
 	 */
 	public UserDetails loadUserByUsername(String username){
-//		System.out.println("---------------" + username + "==================");
-//		return new User(username, "$2a$10$c15533qG.62okc9xCqBYO.UdG7f2i6rS3518ejAgrzbI3zERK.SGS", true, true, true, true, getAuthorities());
 		UserDetails userDetails = null;
 
 		try {
@@ -64,20 +62,6 @@ public class BcsUserDetailService implements UserDetailsService {
 			authList.add(new SimpleGrantedAuthority(role.getRoleType().name()));
 			System.out.println(" Role:" + role.getRoleType().name() );
 		}
-//		authList.add(new SimpleGrantedAuthority("ROLE_USER"));
-//		authList.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
-
-		return authList;
-	}
-	private Collection<GrantedAuthority> getAuthorities() {
-		List<GrantedAuthority> authList = new ArrayList<GrantedAuthority>();
-
-		/*List<Role> roles = userService.listUserRoles(user.getId());
-		for (Role role : roles) {
-			authList.add(new SimpleGrantedAuthority(role.toString()));
-		}*/
-		authList.add(new SimpleGrantedAuthority("ROLE_USER"));
-		authList.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
 
 		return authList;
 	}
