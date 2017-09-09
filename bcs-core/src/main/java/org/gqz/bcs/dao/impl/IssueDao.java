@@ -1,9 +1,10 @@
-package org.gqz.bcs.dao;
+package org.gqz.bcs.dao.impl;
 
 import java.util.List;
 
 import org.gqz.basic.dao.BaseDao;
 import org.gqz.basic.model.Pager;
+import org.gqz.bcs.dao.IIssueDao;
 import org.gqz.bcs.model.Issue;
 import org.springframework.stereotype.Repository;
 

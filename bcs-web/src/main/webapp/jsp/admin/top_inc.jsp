@@ -51,7 +51,9 @@
 			data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
 			<ul class="dropdown-menu">
 				<li><a href="<%=request.getContextPath()%>/admin/issue/issues">Topics</a></li>
-				<li><a href="<%=request.getContextPath()%>/admin/issue/add">Add</a></li>
+				<sec:authorize access="isAuthenticated()">
+					<li><a href="<%=request.getContextPath()%>/admin/issue/add">Add</a></li>
+				</sec:authorize>
 				<sec:authorize access="hasRole('ROLE_ADMIN')">
 					<li class="divider"></li>
 					<li><a href="<%=request.getContextPath()%>/admin/user/users">Users</a></li>

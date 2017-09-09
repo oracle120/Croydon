@@ -8,6 +8,8 @@
 	<http auto-config="true" use-expressions="true">
 		<intercept-url pattern="/admin/user/**" access="hasRole('ROLE_ADMIN')" />
 		<intercept-url pattern="/admin/role/**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/admin/issue/add" access="isAuthenticated()" />
+		<intercept-url pattern="/admin/issue/update/**" access="isAuthenticated()" />
 
 		<!-- access denied page -->
 		<!-- <access-denied-handler error-page="/admin/login/login" /> -->

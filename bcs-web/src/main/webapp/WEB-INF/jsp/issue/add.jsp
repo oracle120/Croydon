@@ -70,7 +70,7 @@ $(function(){
 				<br>
 				
 				<div class="form-group">
-					<label>Author</label><sf:input type="text" class="form-control" path="userid" />
+					<label>Author</label><sf:input type="text" class="form-control" path="userid" value="${pageContext.request.userPrincipal.name }" />
 				</div>
 				<br>
 				
