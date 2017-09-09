@@ -44,15 +44,18 @@
 			<li><a href="<%=request.getContextPath()%>/admin/login/login">Login</a></li>
 		</c:if>
 		<c:if test="${pageContext.request.userPrincipal.name != null}">
+			<li><a href="#">${pageContext.request.userPrincipal.name }</a></li>
 			<li><a href="<%=request.getContextPath()%>/admin/login/logout">Logout</a></li>
 		</c:if>
 		<li class="dropdown"><a href="#" class="dropdown-toggle"
 			data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
 			<ul class="dropdown-menu">
-				<li><a href="<%=request.getContextPath()%>/admin/issue/add">Add</a></li>
 				<li><a href="<%=request.getContextPath()%>/admin/issue/issues">Topics</a></li>
+				<li><a href="<%=request.getContextPath()%>/admin/issue/add">Add</a></li>
 				<sec:authorize access="hasRole('ROLE_ADMIN')">
+					<li class="divider"></li>
 					<li><a href="<%=request.getContextPath()%>/admin/user/users">Users</a></li>
+					<li class="divider"></li>
 					<li><a href="<%=request.getContextPath()%>/admin/role/roles">Roles</a></li>
 				</sec:authorize>
 				<li class="divider"></li>
