@@ -67,7 +67,7 @@ $(function(){
 				<br>
 				
 				<div class="form-group">
-					<label>Author</label><sf:input type="text" class="form-control" path="userid" />
+					<label>Author</label><sf:input type="text" class="form-control" path="userid" readonly="true" />
 				</div>
 				<br>
 				
