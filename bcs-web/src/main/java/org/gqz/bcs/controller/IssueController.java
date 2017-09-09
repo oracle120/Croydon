@@ -6,6 +6,8 @@ import javax.validation.Valid;
 import org.gqz.bcs.dto.IssueDto;
 import org.gqz.bcs.model.Issue;
 import org.gqz.bcs.service.IIssueService;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -61,6 +63,12 @@ public class IssueController {
 	@RequestMapping(value = "/update/{id}", method = RequestMethod.GET)
 	public String update(@PathVariable int id, Model model) {
 		Issue u = issueService.load(id);
+		
+		String username = ((UserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername();
+		if (!u.getUserid().equals(username))  //当前登录用户不是该topic的作者，就直接返回到topic列表
+		{
+			return "redirect:/admin/issue/issues";
+		}
 		model.addAttribute("issueDto",new IssueDto(u));
 		return "issue/update";
 	}

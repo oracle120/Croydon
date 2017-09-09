@@ -18,7 +18,7 @@ public class IssueDao extends BaseDao<Issue> implements IIssueDao {
 
 	@Override
 	public Pager<Issue> findIssue() {
-		return this.find("from Issue");
+		return this.find("from Issue issue order by issue.date desc");
 	}
 
 	@Override
