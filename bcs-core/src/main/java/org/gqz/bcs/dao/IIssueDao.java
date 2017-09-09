@@ -11,4 +11,6 @@ public interface IIssueDao extends IBaseDao<Issue> {
 	public List<Issue> listIssuse();
 	
 	public Pager<Issue> findIssue();
+	
+	public String getUserById(int id);
 }

@@ -20,4 +20,11 @@ public class IssueDao extends BaseDao<Issue> implements IIssueDao {
 		return this.find("from Issue");
 	}
 
+	@Override
+	public String getUserById(int id) {
+		String hql = "select gi.userid from Issue gi where gi.id=?";
+		
+		return (String) this.queryObject(hql, id);
+	}
+
 }

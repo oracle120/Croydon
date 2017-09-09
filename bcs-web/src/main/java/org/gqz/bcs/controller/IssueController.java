@@ -83,7 +83,7 @@ public class IssueController {
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public String show(@PathVariable int id, Model model) {
 		model.addAttribute(issueService.load(id));
-		model.addAttribute("islogin", "yes");
+		model.addAttribute("topicUser", issueService.getUserByid(id));
 		return "issue/show";
 	}
 }

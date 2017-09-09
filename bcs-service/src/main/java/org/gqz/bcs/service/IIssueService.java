@@ -32,6 +32,13 @@ public interface IIssueService {
 	 * @return
 	 */
 	public Issue load(int id);
+	
+	/**
+	 * 根据文章id，或者该文章所属用户
+	 * @param id
+	 * @return
+	 */
+	public String getUserByid(int id);
 
 	/**
 	 * 更新问题

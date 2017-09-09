@@ -48,7 +48,7 @@
 					<h1>
 						${issue.title } 
 						<small>${issue.userid } 
-						<c:if test="${islogin != 'yes' }">
+						<c:if test="${pageContext.request.userPrincipal.name == topicUser}">
 						<small>[<a
 								href="update/${issue.id }" class="list_op">Edit</a>]
 						</small>

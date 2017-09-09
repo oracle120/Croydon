@@ -55,6 +55,11 @@ public class IssueService implements IIssueService {
 	}
 
 	@Override
+	public String getUserByid(int id) {
+		return issueDao.getUserById(id);
+	}
+	
+	@Override
 	public void update(Issue issue) {
 		issueDao.update(issue);
 	}
