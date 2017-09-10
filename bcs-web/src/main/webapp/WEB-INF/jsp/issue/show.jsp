@@ -49,8 +49,9 @@
 						${issue.title } 
 						<small>${issue.userid } 
 						<c:if test="${pageContext.request.userPrincipal.name == topicUser}">
-						<small>[<a
-								href="update/${issue.id }" class="list_op">Edit</a>]
+						<small>
+							[<a href="update/${issue.id }" class="list_op">Edit</a>]
+							[<a href="delete/${issue.id }" class="list_op" onclick="confirmdelete()">Delete</a>]
 						</small>
 						</c:if>
 						</small>
@@ -77,5 +78,13 @@
 		});
 	</script>
 
+<script type="text/JavaScript">
+		function confirmdelete() {
+			if (!confirm("该操作不可逆，确认执行该操作吗？")) {
+				window.event.returnValue = false;
+			}
+		}
+	</script>
+	
 </body>
 </html>
